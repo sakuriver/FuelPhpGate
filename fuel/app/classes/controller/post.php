@@ -1,6 +1,8 @@
 <?php
 
 use Fuel\Core\Controller;
+use Fuel\Core\Input;
+use Fuel\Core\Response;
 use Fuel\Core\View;
 
 class Controller_Post extends Controller
@@ -34,4 +36,26 @@ class Controller_Post extends Controller
         }
         echo "finished";
     }
+
+    public function action_form()
+    {
+        return View::forge('post/form');
+    }
+
+    public function action_save()
+    {
+        $form = array();
+        $form['title'] = Input::post('title');
+        $form['summary'] = Input::post('summary');
+        $form['body'] = Input::post('body');
+        $now = time();
+        $form['created_at'] = $now;
+        $form['updated_at'] = $now;
+
+        $post = Model_Post::forge();
+        $post->set($form);
+        $post->save();
+        Response::redirect('post/form');
+    }
+
 }
