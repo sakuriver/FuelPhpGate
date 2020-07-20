@@ -22,9 +22,11 @@
 return array(
 	'default' => array(
 		'connection' => array(
-			'dsn'      => 'mysql:host=localhost;dbname=fuel_dev',
-			'username' => 'root',
-			'password' => 'root',
+			'dsn'      => 'mysql:host=localhost;dbname=myblog;unix_socket=/tmp/mysql.sock',
+			'hostname' => 'localhost',
+			'username' => 'dbuser',
+			'password' => 'dbpass_12A',
+			'database' => 'myblog',
 		),
 	),
 );
