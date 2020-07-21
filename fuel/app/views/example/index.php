@@ -1,0 +1,11 @@
+<h2>Sakuriverの特徴</h2>
+<ul>
+    <li>緑亀のアイコン</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>    
+</ul>
+<h2></h2>
+<ul></ul>
