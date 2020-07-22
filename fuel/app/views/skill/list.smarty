@@ -1,0 +1,23 @@
+<html>
+    <meta charset="UTF-8">
+    <head>{$title}</head>
+    <body>
+      {foreach from=$elements item=$element }
+      <form action="/skill/list/{$element["id"]}" method="post">
+          <input type="submit" value="{$element["name"]}属性検索">
+      </form>
+      {/foreach}
+      {$element_name}のスキル一覧
+      {foreach from=$skills item=$skill }
+          <div style="background-color: #999;">
+             スキル名　：　{$skill['title']}
+          </div>
+          <div>
+             属性 {$skill['element']}
+          </div>
+          <div>
+             説明 {$skill['description']}
+          </div>
+      {{/foreach}}
+    </body>
+</html>
