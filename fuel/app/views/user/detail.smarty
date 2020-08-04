@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>酒場</title>
+</head>
+<body>
+    <div class="header" style="min-height: 80px;">
+       傭兵詳細情報
+    </div>
+    <div>
+        <a href="/user/list">酒場一覧へ戻る</a>
+        <div style="border: 1px solid black; padding:5px; width:350px;">
+             <div >
+                <div>基本情報</div>
+             </div>
+             <div >
+               <div>登録番号:{$user.id}</div>
+               <div>登録名:{$user.display_name}</div>
+               <div>レベル:{$user.level}</div>
+             </div>
+           </div>
+        <div>
+        <div style="border: 1px solid black; padding:5px; width:350px;">
+           <div>
+              <div>スキル一覧</div>
+           </div>
+           {foreach from=$user_skills item=user_skill key=key name=name}
+            <div style="border: 1px solid black; padding:5px; width:150px;">
+              <div>スキル名:{$skill_maps[$user_skill.skill_id]->title}({$user_skill.skill_id})</div>
+              <div>取得日:{$user_skill.created_at}</div>
+            </div>
+           {/foreach}
+        </div>
+          
+    </div>
+</body>
+</html>

@@ -36,17 +36,15 @@ class Controller_Skill extends Controller
             $data['elements'][] = $element_data;
         }
 
-        
-
         $data['element_name'] = $element_maps[$select_element_id]['name'];
         if (isset($element_skills[$select_element_id])) {
-        foreach ($element_skills[$select_element_id] as $element_skill) {
-            $data['skills'][] = array(
-              'title' => $element_skill['title'],
-              'element' => $element_maps[$element_skill['element_id']]['name'],
-              'description' => $element_skill['description'],  
-            );
-        }
+            foreach ($element_skills[$select_element_id] as $element_skill) {
+                $data['skills'][] = array(
+                  'title' => $element_skill['title'],
+                  'element' => $element_maps[$element_skill['element_id']]['name'],
+                  'description' => $element_skill['description'],  
+                );
+            }
         }
 
         return Response::forge(View_Smarty::forge('skill/list', $data));
