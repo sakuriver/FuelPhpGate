@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>酒場</title>
+</head>
+<body>
+    <div class="header" style="min-height: 80px;">
+        酒場管理局
+    </div>
+    <div>
+        <a href="/user/list">傭兵名簿操作室</a>
+        <a href="/admintop/user_add">傭兵緊急追加</a>
+
+    </div>
+</body>
+</html>

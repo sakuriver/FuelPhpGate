@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>酒場</title>
+</head>
+<body>
+    <div class="header" style="min-height: 80px;">
+       いらっしゃい、ここは酒場だい。
+       何か見ていくかい
+    </div>
+    <div>
+        <a href="/user/list">傭兵一覧</a>
+        <a href="/skill/list">技図鑑</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>酒場</title>
+</head>
+<body>
+    <div class="header" style="min-height: 80px;">
+       傭兵一覧
+    </div>
+    <div>
+            <div style="float:left">
+
+        <a href="/top">酒場の窓口へ戻る</a>
+        <a href="/skill/list">技図鑑</a>
+        </div>
+        <div style="clear:both"></div>
+          
+        {foreach from=$users item=item key=key name=name}
+            <div style="float:left;border: 1px solid black; padding:5px; width:150px;">
+              <div>登録名:{$item.display_name}</div>
+              <div>レベル:{$item.level}</div>
+              <div><a href="/user/detail/{$item.id}">詳細へ</a></div>
+            </div>
+            <div style="clear:both"></div>
+
+        {/foreach}
+    </div>
+</body>
+</html>
