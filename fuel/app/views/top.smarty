@@ -8,6 +8,7 @@
        何か見ていくかい
     </div>
     <div>
+        <a href="/user/regist_top/">傭兵登録をしたい</a>
         <a href="/user/list">傭兵一覧</a>
         <a href="/skill/list">技図鑑</a>
     </div>
