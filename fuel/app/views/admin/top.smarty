@@ -9,7 +9,6 @@
     <div>
         <a href="/user/list">傭兵名簿操作室</a>
         <a href="/admintop/user_add">傭兵緊急追加</a>
-
     </div>
 </body>
 </html>
