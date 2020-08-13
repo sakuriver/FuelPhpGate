@@ -1,6 +1,7 @@
 <?php
 
 use Fuel\Core\Controller;
+use Fuel\Core\Input;
 use Fuel\Core\Presenter;
 use Fuel\Core\Response;
 
@@ -8,7 +9,9 @@ class Controller_User extends Controller
 {
 
     const USER_LIMIT = 30;
+    const HUNTER_ID = 1002;
 
+    const COMPLETE_MESSAGE = "傭兵として登録しておいたぜ";
 
     public function action_index()
     {
@@ -38,5 +41,37 @@ class Controller_User extends Controller
         $data["user_skills"] = $user_skills;
         $data["skill_maps"] = $skill_maps;
         return Response::forge(View_Smarty::forge('user/detail', $data));
+    }
+
+    public function action_regist_top()
+    {
+        $data = array();
+        $data["message"] = "";
+
+        return Response::forge(View_Smarty::forge('user/regist', $data));
+
+    }
+
+    public function action_regist_top_add()
+    {
+        $data = array();
+
+
+        $name = Input::post('name');
+        $display_name = Input::post('display_name');
+        $level = Input::post('level');
+
+        $user = Model_User::forge();
+        $user->name = $name;
+        $user->display_name = $display_name;
+        $user->level = $level;
+        $user->job_id = self::HUNTER_ID;
+        $user->updated_at = date("Y-m-d H:i:s");
+        $user->save();
+
+        $data["message"] = self::COMPLETE_MESSAGE;
+        
+        return Response::forge(View_Smarty::forge('user/regist', $data));
+
     }
 }

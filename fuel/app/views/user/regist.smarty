@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>酒場</title>
+</head>
+<body>
+    <div><p>{$message}</p></div>
+    <div class="header" style="min-height: 80px;">
+       お、傭兵志願者かい。
+       それなら下の名簿に項目事項を描いてくれるかい
+    </div>
+    <div style="background-color:#222222; color:#EEEEEE; padding: 5px;">
+        <h2 style="text-align:center">傭兵登録書</h2>
+        <form action="/user/regist_top_add/" method="post"> 
+            <div style="border: 1px solid #DDDDDD; padding:5px; width:350px;"><div>本名</div><input size="30" name="name" type="text"></div> 
+            <div style="border: 1px solid #DDDDDD; padding:5px; width:350px;"><div>呼び名</div><input size="40" name="display_name" type="text"></div> 
+            <div style="border: 1px solid #DDDDDD; padding:5px; width:350px;"><div>レベル</div><input size="40" name="level" type="text"></div> 
+            <div style="border: 1px solid #DDDDDD; padding:5px; width:350px;"><div>職業</div>整備中</div> 
+            <div style="border: 1px solid #DDDDDD; padding:5px; width:350px;"><input type="submit" name="submit" value="申請"></div> 
+        </form>
+    </div>
+</body>
+</html>
